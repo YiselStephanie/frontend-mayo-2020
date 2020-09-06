@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>intro js</title>
+  </head>
+
+  <body>
+    <h1>hola hola</h1>
+    <script>
+      var suma = 2 + 2;
+      var miedad = 38;
+      var laedadotro = 22;
+      var resultado_de_edades = miedad + laedadotro;
+      console.log("Resultado: " + suma);
+      console.log("Resultado: " + resultado_de_edades);
+      console.log("Resultado: " + (miedad + laedadotro));
+      //
+      var resultado2 = suma >= miedad;
+      console.log("resultado2 : " + resultado2);
+
+      var resultado3 = resultado2 == true && miedad === 38;
+      console.log("resultado3: " + resultado3);
+
+      var resultado4 = resultado2 == false || miedad === 38;
+      console.log("resultado3: " + resultado4);
+
+      console.log("resultado 4 de tipo: " + typeof resultado4);
+      console.log("resultadode tipo mi edad : " + typeof miedad);
+
+      var nombre = "maximiliano j";
+      var apellido = "sorribas";
+      console.log("resultado de tipo : " + typeof nombre);
+
+      var nombrecompleto = nombre + " " + apellido;
+      console.log(
+        "resultado mi nombre completo: " + nombrecompleto.toUpperCase()
+      );
+
+      //CANTIDAD DE CARACTERES EN LA CADENA
+      console.log("resultado cantidad caractres: " + nombrecompleto.length);
+      //COMO OBTENER UNA CARACTER DENTRO DE nombrecompleto
+      //   console.log(
+      //     "resultado una letra: " + nombrecompleto.fromCharCode(1, 2, 3) //pendiente!! tb charAt
+      //   );
+      //STRING REPLACE
+      console.log("resultado replace: " + nombrecompleto.replace("j", "jose"));
+      //STRING REPEAT solo num enteros
+      console.log("resultado repetir: " + nombre.repeat(2));
+      //Expresiones regulares
+      cadena = "para mas info, vea capitulo 3.4.5.1";
+      expresion = /(capitulo \d+(\.\d)*)/i;
+      hallado = cadena.match(expresion);
+      console.log(hallado[0]);
+      //resultado esperado : capitulo 3.4.5.1
+
+      //substrin (inicio [,longitud])
+      console.log("resultado substring de nombre: " + nombre.substr(0, 3));
+
+      //SPLIT ([SEPARADOR][,LIMITE])
+      var spliteando = nombrecompleto.split(" "); //0maxi, 1j, 2sorri
+      console.log("resultado split: " + spliteando); //separado en comas
+      var minombre = spliteando[0];
+      var snombre = spliteando[1];
+      var apellido = spliteando[2];
+
+      console.log(spliteando[0]); //yo
+      console.log("resultado split q hizo el profe: " + minombre); //invoca a la variable
+
+      ///ejemplo 2 split
+      cadena2 = "celular,$150,moto g,2";
+      console.log(cadena2.split()); /// hasta aqui me imprime el array normal
+
+      var spliteando2 = cadena2.split(","); //aqui hice una division de los splits
+      var producto = spliteando2[0];
+      var precio = spliteando2[1];
+      var modelo = spliteando2[2];
+      var stock = spliteando2[3];
+
+      //  console.log(spliteando2[1]);mostraria el precio invocando el array
+
+      console.log("producto: " + producto);
+      console.log("precio: " + precio);
+      console.log("modelo: " + modelo);
+      console.log("stock: " + stock);
+    </script>
+  </body>
+</html>
