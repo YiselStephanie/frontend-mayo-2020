@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 
+      Un usuario debe ingresar su nombre de usuario y ademas su clave(2 veces).
+      Mostrar un mensaje si los datos son correctos y las claves son iguales.
+      Se debe validar el tipo de dato ingresado en su nombre. 
+      Se debe validar que el nombre de usuario no puede ser menor a 4 caracteres ni mayor a 8 caracteres. 
+      Se debe validar que ambas claves sean iguales. 
+    -->
+  </head>
+  <body>
+    <script>
+      var n1 = parseInt(prompt("ingresa n1"));
+      var n2 = parseInt(prompt("ingresa n2"));
+      var n3 = parseInt(prompt("ingresa n3"));
+      var promedio = (n1 + n2 + n3) / 3;
+
+      if (
+        n1 <= 10 &&
+        typeof n1 === "number" &&
+        typeof n2 === "number" &&
+        typeof n3 === "number" &&
+        promedio >= 6
+      ) {
+        alert("aprobo con: " + Math.round(promedio));
+      } else if (typeof n1 === "number" && promedio < 5) {
+        alert("deaprobo ");
+      } else alert("datos mal ingresados");
+
+      // FUNCIONA PERFECTO APATO PARA COND 1 AL 10
+      //    if (typeof n1 === "number" && promedio >= 6) {
+      //     alert("aprobo con: " + Math.round(promedio));
+      //   } else if (typeof n1 === "number" && promedio < 5) {
+      //     alert("deaprobo ");
+      //   } else alert("datos mal ingresados");
+
+      //TB FUNCIONA
+
+      //   if (
+      //     typeof n1 === "number" &&
+      //     typeof n2 === "number" &&
+      //     typeof n3 === "number" &&
+      //     promedio >= 6
+      //   ) {
+      //     alert("aprobo con: " + Math.round(promedio));
+      //   } else if (typeof n1 === "number" && promedio < 5) {
+      //     alert("deaprobo ");
+      //   } else alert("datos mal ingresados");
+    </script>
+  </body>
+</html>
